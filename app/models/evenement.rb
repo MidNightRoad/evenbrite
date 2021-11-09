@@ -5,10 +5,10 @@ validates :start_date, presence: true
 validate :start_date_cannot_be_in_the_past
 validates :duration, presence: true
 validate :duration_modulo_5 
-validates :title, presence: true, length: { in: 5..140 }
-validates :description, presence: true, length: { in: 20..1000}
-validates :price, presence: true,  length: { in: 1..1000}
-validates :location, presence: true 
+#validates :title, presence: true, length: { in: 5..140 }
+#validates :description, presence: true, length: { in: 20..1000}
+#validates :price, presence: true,  length: { in: 1..1000}
+#validates :location, presence: true 
 belongs_to :admin, class_name: "User"
 
 
