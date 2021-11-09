@@ -31,7 +31,7 @@
         </ul>
        <% if user_signed_in? %>
        
-         <a class="nav-link" <%= link_to "Déconnexion", destroy_user_session_path, method: :delete %> >
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "navbar-brand" %>
        
        
        <%  else %>
