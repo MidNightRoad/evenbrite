@@ -3775,3 +3775,318 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 266ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1663)
 
 
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-09 14:39:42 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1790)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2120)
+Completed 200 OK in 8ms (Views: 6.9ms | Allocations: 3836)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-09 14:39:42 +0100
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 242)
+Completed 200 OK in 3ms (Views: 2.0ms | Allocations: 1201)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-11-09 14:39:43 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 219)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 140)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1778)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 1892)
+Completed 200 OK in 12ms (Views: 10.7ms | Allocations: 3070)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-11-09 14:39:46 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1050)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1164)
+Completed 200 OK in 5ms (Views: 4.0ms | Allocations: 1688)
+
+
+Started GET "/events" for 127.0.0.1 at 2021-11-09 14:39:48 +0100
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  Rendered events/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 102)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 240)
+Completed 200 OK in 3ms (Views: 2.1ms | Allocations: 1197)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-11-09 14:39:59 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1055)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 1169)
+Completed 200 OK in 11ms (Views: 9.9ms | Allocations: 1682)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-11-09 14:40:06 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"berger@hotmail.fr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "berger@hotmail.fr"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.1ms | Allocations: 576)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2116)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2229)
+Completed 200 OK in 283ms (Views: 8.8ms | ActiveRecord: 14.2ms | Allocations: 12814)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-09 14:40:09 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 149)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1122)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 1700)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-11-09 14:40:10 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"berger@hotmail.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "berger@hotmail.fr"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 280ms (ActiveRecord: 2.9ms | Allocations: 1946)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"berger@hotmail.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 149)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 996)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 1079)
+Completed 200 OK in 278ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 1648)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-11-09 14:40:16 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"berger@hotmail.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "berger@hotmail.fr"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 266ms (ActiveRecord: 1.3ms | Allocations: 2772)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-09 14:40:16 +0100
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1214)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.0ms | Allocations: 1602)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2021-11-09 14:40:21 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms | Allocations: 1846)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-09 14:40:22 +0100
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 174)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 557)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-09 14:40:54 +0100
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 457)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1639)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-09 14:41:06 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1795)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 1909)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 3407)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-11-09 14:41:07 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"berger@hotmail.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "berger@hotmail.fr"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 263ms (ActiveRecord: 1.0ms | Allocations: 1659)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"berger@hotmail.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 149)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1002)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1085)
+Completed 200 OK in 251ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 1632)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-11-09 14:41:10 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"berger@hotmail.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "berger@hotmail.fr"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 247ms (ActiveRecord: 0.9ms | Allocations: 1639)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"berger@hotmail.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 149)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 996)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1079)
+Completed 200 OK in 232ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1623)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-11-09 14:41:12 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.0ms | Allocations: 212)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 104)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1664)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1778)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 2856)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-11-09 14:41:23 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lll@lll.fr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lll@lll.fr"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "lll@lll.fr"], ["encrypted_password", "$2a$12$.ILycOW9uUttNZd8HhdlPO3QLm4MYFD.l7xmOiNSUGeA8pDe2Pz7K"], ["created_at", "2021-11-09 13:41:23.425465"], ["updated_at", "2021-11-09 13:41:23.425465"]]
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.5ms | Allocations: 178)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.8ms | Allocations: 349)
+  Rendering layout layouts/mailer.text.erb
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.3ms | Allocations: 160)
+  Rendered layout layouts/mailer.text.erb (Duration: 0.6ms | Allocations: 310)
+UserMailer#welcome_email: processed outbound mail in 7.1ms
+Delivered mail 618a7a836ddb0_58204ac480927@pierre-VirtualBox.mail (1059.5ms)
+Date: Tue, 09 Nov 2021 14:41:23 +0100
+From: berger.pierre@hotmail.fr
+To: lll@lll.fr
+Message-ID: <618a7a836ddb0_58204ac480927@pierre-VirtualBox.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_618a7a836cade_58204ac48088c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_618a7a836cade_58204ac48088c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgIGV0IGJpZW52ZW51ZSBjaGV6IG5vdXMgIQ0KPT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PQ0KIA0KVHUgdCdlcyBpbnNjcml0IHN1ciBtb25zaXRlLmZyIGVuIHV0aWxp
+c2FudCBsJ2UtbWFpbCBzdWl2YW50IDogbGxsQGxsbC5mci4NCiANClBvdXIg
+YWNjw6lkZXIgw6AgdG9uIGVzcGFjZSBjbGllbnQsIGNvbm5lY3RlLXRvaSB2
+aWEgOiBodHRwOi8vbW9uc2l0ZS5mci9sb2dpbi4NCiANCsOAIHRyw6hzIHZp
+dGUgc3VyIG1vbnNpdGUuZnIgIQ0K
+
+----==_mimepart_618a7a836cade_58204ac48088c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut  et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : lll@=
+lll.fr.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_618a7a836cade_58204ac48088c--
+
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1330ms (ActiveRecord: 8.3ms | Allocations: 28683)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-09 14:41:24 +0100
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 1210)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 1.5ms | Allocations: 1600)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2021-11-09 14:41:45 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms | Allocations: 1850)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-09 14:41:45 +0100
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 174)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 557)
+
+
