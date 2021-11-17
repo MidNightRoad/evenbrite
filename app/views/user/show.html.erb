@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+<body>
+<% if current_user.id == params[:id].to_i || current_user.try(:is_admin) == true %>
+
+ <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"> Prenom :<%= @user_first_name%></h5>
+    <h6 class="card-subtitle mb-2 text-muted">Nom :<%= @user_last_name %></h6>
+
+    <br> Description: <%= @user_description %> 
+    
+    <br> Email: <%= @user_email %> </p>
+  </div>
+ </div>
+
+ <h2>Mes Evenements:</h2>
+  <div class = "d-inline-flex flex-wrap justify-content-around align-self-stretch">
+  <%evenement_organised = Evenement.where(admin_id: @user.id)%>
+  <%evenement_organised.each do |evenement| %>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt=" ">
+        <div class="card-body">
+          <h5 class="card-title"> <%= evenement.title %></h5>
+          <h6> le: <%= evenement.start_date%> </h6>
+          <p class="card-text"> <%= evenement.description %> </p> 
+          
+        </div>
+      </div>
+     <%end%>
+   </div>
+ 
+ <% else %>
+ 
+
+ <h1> Tu n'as pas acces a ce profil </h1>
+
+ <% end %>
+ 

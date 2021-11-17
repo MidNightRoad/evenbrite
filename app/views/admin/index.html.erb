@@ -1,0 +1,27 @@
+<h1>Bienvenue Administrateur ! </h1>
+<table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <% @user.each do |user|%>
+  <tbody>
+    <tr>
+      <th scope="row"><%=user.id%></th>
+      <td><%=user.first_name%></td>
+      <td><%=user.last_name%></td>
+      <td> <%= link_to 'Voir user ', user_path(user.id) , class:'btn btn-primary' %></td>
+      <td> <%=link_to 'Supprimer', user_path(user.id) ,method: :delete, class:'btn btn-primary'%>
+      <td> <%=link_to 'Modifier', edit_user_path(user.id) , class:'btn btn-primary'%>
+ 
+    </tr>
+    <% end %>
+
+  </tbody>
+</table>
+

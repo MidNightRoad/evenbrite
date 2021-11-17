@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">EventNew</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto d-flex align-items-center ">
+
+          <li class="nav-item">
+            <%= link_to 'Accueil',events_path, class: 'btn btn-outline-light me-2'%>  
+          </li>
+
+          <li class="nav-item">
+            <a href="<%=new_event_path %>", class="nav-link">Créer un évènement</a>
+          </li>
+      </ul>
+      <ul class="navbar-nav d-flex align-items-center ">
+
+        <div class="text-end">
+         <%= link_to 'Se connecter', new_user_session_path, class: 'btn btn-outline-light me-2' %>
+          <a class="btn btn-warning" href="<%=new_user_registration_path%>" role="button">S'inscrire</a>  
+        </div>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>

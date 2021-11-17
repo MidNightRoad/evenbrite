@@ -1,0 +1,42 @@
+<div class="modal-dialog " role="document" >
+  <div class="modal-content rounded-2 shadow p-3 mb-2 bg-transparent  text-center"  style='height : 50%;'>
+    <div class="modal-header p-5 pb-4 justify-content-center border-bottom-0">
+        <h5 class="modal-title">Modifier Utilisateur</h5> 
+        <h2 class="fw-bold mb-0 text-center"> </h2>
+      </div>
+      <%= form_with(url:user_path, method: "put", local: true) do |f| %>
+      <form>
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+      <div class="form-floating mb-4">
+        <input type="text" id="first_name" name="first_name" class="form-control rounded-4" value="<%= @user_first_name %>" required/>
+      </div>
+      <div class="form-floating mb-4">
+        <input id="last_name" name="last_name" class="form-control rounded-4" value="<%= @user_last_name %>" required/>
+      </div>
+      <div  class="form-floating mb-4">
+        <textarea type="text" id="description" name="description" rows="2" class="form-control rounded-4"  required><%= @user_description %></textarea>
+      </div>
+      <div class="form-floating mb-4">
+        <input id="email" name="email" class="form-control rounded-4" value="<%= @user_email %>" required/>
+      </div>
+      <div  class="form-floating mb-4">
+        <label for="Form-pass3 text-center">Uniquement si Administrateur True or False </label>
+        <input type="text" id="is_admin" name="is_admin" class="form-control rounded-4" value="<%= @user_is_admin %>" required>
+      </div> 
+      <button type="submit" class="btn btn-primary">  Envoie </button>
+        
+        <%end%>
+    </form>  
+    </div>
+  </div>
+</div>
+
+
+ 
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      </body>
+</html>

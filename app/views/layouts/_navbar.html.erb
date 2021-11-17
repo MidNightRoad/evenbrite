@@ -1,0 +1,46 @@
+<link href="bootstrap.css" rel="stylesheet" type="text/css"/>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">EventNew</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto d-flex align-items-center ">
+
+          <li class="nav-item">
+            <a href="<%= events_path%>", class="nav-link">Accueil</a>
+
+          </li>
+
+          <li class="nav-item">
+            <a href="<%= new_event_path%>", class="nav-link">Créer un évènement</a>
+          </li>
+      </ul>
+        <ul class="navbar-nav d-flex align-items-center ">
+
+          <li class="nav-item mx-1">
+            Bienvenue à toi, User!
+          </li>
+
+        </ul>
+        <% if user_signed_in? %> 
+          
+          <% if current_user.try(:is_admin) == true %>
+            <%= link_to 'Administration' , admin_index_path , class: 'btn btn-outline-light me-2'%>  
+          <%end %>
+          <%= link_to "Deconnection", destroy_user_session_path, method: :DELETE, class: "btn btn-outline-light me-2" %>
+          <%= link_to "Profil", user_path(current_user.id), class: "btn btn-outline-light me-2"%>
+        <% else %>
+      
+        <% end %>
+       
+      
+       
+    </div>
+  </div>
+</nav>

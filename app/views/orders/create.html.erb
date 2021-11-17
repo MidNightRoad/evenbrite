@@ -1,0 +1,3 @@
+<h2>Bravo , vous avez bien payez  <strong><%= @amount %> €</strong>!</h2>
+<%= link_to "Revenir a l'acceuil" , events_path %>
+<%Attendance.create(evenement_id: @evenement.id, user_id: @user.id)%>

@@ -1,0 +1,17 @@
+<div class = "d-inline-flex flex-wrap justify-content-around align-self-stretch">
+  <%@evenement.each do |evenement| %>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt=" ">
+        <div class="card-body">
+          <h5 class="card-title"> <%= evenement.title %></h5>
+          <h6> le: <%= evenement.start_date%> </h6>
+          <h6> de: <%= evenement.admin.first_name%>
+          
+          <p class="card-text"> <%= evenement.description %> </p> 
+          <a
+          href="events/<%= evenement.id %>" class="btn btn-primary" >Voir l'evenement </a>
+          
+        </div>
+      </div>
+ <% end %>
+ </div>

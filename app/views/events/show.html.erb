@@ -1,0 +1,70 @@
+<div class="container py-3">
+  <div class="title h1 text-center">Evenement en cours </div>
+  <!-- Card Start -->
+  <div class="card">
+    <div class="row ">
+
+      <div class="col-md-7 px-3">
+        <div class="card-block px-6">
+        <div class="card-body">
+          <h4 class="card-title"> <%= @evenement_title %></h4>
+          <p class="card-text">
+           <%= @evenement_description %>
+          </p>
+          <p class="card-text"> Commence le: <%= @start_date%>
+          </p>
+          <p class="card-text"> Durée de <%= @duration%> minutes
+          </p>
+          <p class="card-text"> A <%= @location%>
+          </p>
+          <p class="card-text"> Prix <%= @price%> €
+          </p>
+         <p class="card-text"> Crée par   <%= @admin%>
+          </p>
+      
+         <% if current_user.id == @adminid || current_user.try(:is_admin) == true  %>
+        <h6>Tu es admin de l'event</h6>
+        <%= link_to  "Gestion Evenement" , event_attendances_path(event_id: @evenement.id) , class: 'btn btn-primary' %>
+      <% elsif Attendance.where(evenement_id: params[:id].to_i).find_by(user_id: current_user.id) %>
+        <h6>tu fait deja partie de l'event</h6>
+      <% else %>
+        <%= link_to "Je veux participer", new_event_order_path(event_id: @evenement.id), class:"btn btn-primary" %> 
+
+
+      <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<style>
+body {
+  background-color:  #eee;
+}
+.title {
+ 
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+     
+}
+.card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 5;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    margin-top:20px;
+}
+</style>
